@@ -5,7 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#061525" />
   <meta name="description" content="Descubre qué puede crear Moonia para tu negocio, marca o proyecto." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Moonia · espacio creativo" />
+  <meta property="og:title" content="Moonia · ¿Qué quieres crear hoy?" />
+  <meta property="og:description" content="Descubre qué podemos construir para tu negocio, marca o proyecto. Encuentra tu órbita en tres preguntas." />
+  <meta property="og:url" content="https://mafvup.github.io/moonia-experience/" />
+  <meta property="og:image" content="https://mafvup.github.io/moonia-experience/moonia-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Moonia · ¿Qué quieres crear hoy?" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Moonia · ¿Qué quieres crear hoy?" />
+  <meta name="twitter:description" content="Encuentra una ruta para tu negocio, marca o proyecto." />
+  <meta name="twitter:image" content="https://mafvup.github.io/moonia-experience/moonia-preview.png" />
+
   <title>Moonia · ¿Qué quieres crear hoy?</title>
+  <link rel="icon" href="moonia-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -38,7 +55,7 @@
             <a class="btn" href="#servicios">Ver lo que hacemos</a>
           </div>
         </div>
-        <div class="hero-card">
+        <div class="hero-card reveal">
           <img class="hero-mark" src="moonia-mark.svg" alt="Símbolo Moonia" />
           <h3 class="question serif">Una idea puede empezar en cualquier punto.</h3>
           <p>Redes, web, ventas, reservas, e-commerce o algo que todavía no tiene nombre.</p>
@@ -53,12 +70,12 @@
         <h2 class="serif">De una publicación<br>a un ecosistema digital.</h2>
         <p class="section-copy">Puedes empezar con una sola necesidad o alinear varias. Moonia trabaja estrategia, diseño y tecnología como partes del mismo proyecto.</p>
         <div class="services-grid">
-          <div class="service"><div class="icon">◌</div><h3>Redes sociales</h3><p>Contenido, estrategia, reels, campañas y producción presencial.</p></div>
-          <div class="service"><div class="icon">⌘</div><h3>Sitios web</h3><p>Landing pages, sitios de negocio, turismo y reservaciones.</p></div>
-          <div class="service"><div class="icon">↗</div><h3>SEO & Ads</h3><p>Posicionamiento, Meta Ads, Google Ads y captación.</p></div>
-          <div class="service"><div class="icon">▣</div><h3>E-commerce</h3><p>Catálogo, pagos, envíos, automatizaciones y tiendas a la medida.</p></div>
-          <div class="service"><div class="icon">☾</div><h3>Turismo</h3><p>Hotelería, experiencias, restaurantes, reservas y presencia local.</p></div>
-          <div class="service"><div class="icon">✦</div><h3>A la medida</h3><p>Apps, portales, membresías, sistemas y desarrollos especiales.</p></div>
+          <div class="service reveal"><div class="icon">◌</div><h3>Redes sociales</h3><p>Contenido, estrategia, reels, campañas y producción presencial.</p></div>
+          <div class="service reveal"><div class="icon">⌘</div><h3>Sitios web</h3><p>Landing pages, sitios de negocio, turismo y reservaciones.</p></div>
+          <div class="service reveal"><div class="icon">↗</div><h3>SEO & Ads</h3><p>Posicionamiento, Meta Ads, Google Ads y captación.</p></div>
+          <div class="service reveal"><div class="icon">▣</div><h3>E-commerce</h3><p>Catálogo, pagos, envíos, automatizaciones y tiendas a la medida.</p></div>
+          <div class="service reveal"><div class="icon">☾</div><h3>Turismo</h3><p>Hotelería, experiencias, restaurantes, reservas y presencia local.</p></div>
+          <div class="service reveal"><div class="icon">✦</div><h3>A la medida</h3><p>Apps, portales, membresías, sistemas y desarrollos especiales.</p></div>
         </div>
       </div>
     </section>
@@ -68,7 +85,7 @@
         <div class="section-kicker">Experiencia Moonia</div>
         <h2 class="serif">Descubre tu órbita.</h2>
         <p class="section-copy">Tres preguntas. Una recomendación inicial. Sin formularios eternos.</p>
-        <div class="quiz-wrap">
+        <div class="quiz-wrap reveal">
           <div class="quiz-progress"><span id="p1" class="on"></span><span id="p2"></span><span id="p3"></span></div>
           <div class="quiz-step active" data-step="1">
             <h3 class="quiz-q">¿Qué estás construyendo?</h3><p class="quiz-sub">Elige lo que más se acerque. No tiene que ser perfecto.</p>
@@ -98,12 +115,14 @@
             </div>
           </div>
           <div class="result" id="result">
-            <div class="result-badge">Encontramos una ruta inicial</div>
+            <div class="result-badge">✦ Tu órbita</div>
+            <p class="result-intro">Por lo que nos contaste, creemos que este puede ser un buen punto de partida:</p>
             <h3 id="resultName">Moonia Híbrido</h3>
             <div class="result-price" id="resultPrice">$5,900 / mes</div>
             <p id="resultText">Una combinación equilibrada de contenido, estrategia y crecimiento.</p>
+            <p class="result-note">No es una decisión definitiva. Podemos ajustar la propuesta a las necesidades reales de tu proyecto.</p>
             <div class="result-actions">
-              <a id="resultContact" class="btn primary" href="https://www.facebook.com/profile.php?id=61592431890783" target="_blank" rel="noopener">Quiero platicarlo con Moonia →</a>
+              <a id="resultContact" class="btn primary" href="#" target="_blank" rel="noopener">Platicar con Moonia por WhatsApp →</a>
               <button class="btn" id="restart">Volver a intentar</button>
             </div>
           </div>
@@ -116,11 +135,11 @@
         <div class="section-kicker">Puntos de partida</div>
         <h2 class="serif">Si quieres números,<br>también los tenemos.</h2>
         <p class="section-copy">Son referencias para ayudarte a ubicar el alcance. Los proyectos especiales se construyen según sus necesidades.</p>
-        <details><summary>Redes sociales</summary><div class="price-list"><div class="price-row"><b>Moonia Digital</b><span>$2,900 / mes</span></div><div class="price-row"><b>Moonia Híbrido</b><span>$5,900 / mes</span></div><div class="price-row"><b>Moonia Presencial</b><span>$9,900 / mes</span></div></div></details>
-        <details><summary>Sitios web</summary><div class="price-list"><div class="price-row"><b>Landing turística</b><span>$7,900</span></div><div class="price-row"><b>Sitio negocio</b><span>$13,900</span></div><div class="price-row"><b>Web turismo avanzada</b><span>$18,900</span></div><div class="price-row"><b>Web turismo + reservas</b><span>desde $24,900</span></div><div class="price-row"><b>Página web a la medida</b><span>según necesidades</span></div></div></details>
-        <details><summary>SEO & publicidad</summary><div class="price-list"><div class="price-row"><b>SEO Local</b><span>$3,900 / mes</span></div><div class="price-row"><b>SEO Growth</b><span>$6,900 / mes</span></div><div class="price-row"><b>Meta Ads · gestión</b><span>desde $2,500 / mes</span></div><div class="price-row"><b>Google Ads · gestión</b><span>desde $2,900 / mes</span></div><div class="price-row"><b>Meta + Google</b><span>desde $4,500 / mes</span></div></div></details>
-        <details><summary>Turismo & Hospitality</summary><div class="price-list"><div class="price-row"><b>Marea</b><span>$7,900 / mes</span></div><div class="price-row"><b>Pleamar</b><span>$12,900 / mes</span></div><div class="price-row"><b>Horizonte</b><span>$19,900 / mes</span></div></div></details>
-        <details><summary>E-commerce & ecosistemas</summary><div class="price-list"><div class="price-row"><b>E-commerce Esencial</b><span>desde $35,000</span></div><div class="price-row"><b>E-commerce Plus</b><span>desde $58,000</span></div><div class="price-row"><b>Sicigia · ecosistema digital</b><span>$34,900</span></div></div></details>
+        <details class="reveal"><summary>Redes sociales</summary><div class="price-list"><div class="price-row"><b>Moonia Digital</b><span>$2,900 / mes</span></div><div class="price-row"><b>Moonia Híbrido</b><span>$5,900 / mes</span></div><div class="price-row"><b>Moonia Presencial</b><span>$9,900 / mes</span></div></div></details>
+        <details class="reveal"><summary>Sitios web</summary><div class="price-list"><div class="price-row"><b>Landing turística</b><span>$7,900</span></div><div class="price-row"><b>Sitio negocio</b><span>$13,900</span></div><div class="price-row"><b>Web turismo avanzada</b><span>$18,900</span></div><div class="price-row"><b>Web turismo + reservas</b><span>desde $24,900</span></div><div class="price-row"><b>Página web a la medida</b><span>según necesidades</span></div></div></details>
+        <details class="reveal"><summary>SEO & publicidad</summary><div class="price-list"><div class="price-row"><b>SEO Local</b><span>$3,900 / mes</span></div><div class="price-row"><b>SEO Growth</b><span>$6,900 / mes</span></div><div class="price-row"><b>Meta Ads · gestión</b><span>desde $2,500 / mes</span></div><div class="price-row"><b>Google Ads · gestión</b><span>desde $2,900 / mes</span></div><div class="price-row"><b>Meta + Google</b><span>desde $4,500 / mes</span></div></div></details>
+        <details class="reveal"><summary>Turismo & Hospitality</summary><div class="price-list"><div class="price-row"><b>Marea</b><span>$7,900 / mes</span></div><div class="price-row"><b>Pleamar</b><span>$12,900 / mes</span></div><div class="price-row"><b>Horizonte</b><span>$19,900 / mes</span></div></div></details>
+        <details class="reveal"><summary>E-commerce & ecosistemas</summary><div class="price-list"><div class="price-row"><b>E-commerce Esencial</b><span>desde $35,000</span></div><div class="price-row"><b>E-commerce Plus</b><span>desde $58,000</span></div><div class="price-row"><b>Sicigia · ecosistema digital</b><span>$34,900</span></div></div></details>
       </div>
     </section>
 
@@ -130,22 +149,23 @@
         <h2 class="serif">¿Y si tu idea no cabe<br>en un paquete?</h2>
         <p class="section-copy">Mejor. Podemos pensar la estructura alrededor de lo que el proyecto necesita.</p>
         <div class="proof-grid">
-          <div class="proof"><div class="num">01 · SALUD</div><h3>Apps médicas</h3><p>Flujos, servicios, consultas, plataformas y herramientas digitales.</p></div>
-          <div class="proof"><div class="num">02 · CONTENIDO</div><h3>Noticias & publicaciones</h3><p>Portales informativos, libros digitales, membresías y suscripciones.</p></div>
-          <div class="proof"><div class="num">03 · OPERACIÓN</div><h3>Ventas & reservaciones</h3><p>Autobuses, hotelería, reservas, e-commerce y sistemas con lógica propia.</p></div>
+          <div class="proof reveal"><div class="num">01 · SALUD</div><h3>Apps médicas</h3><p>Flujos, servicios, consultas, plataformas y herramientas digitales.</p></div>
+          <div class="proof reveal"><div class="num">02 · CONTENIDO</div><h3>Noticias & publicaciones</h3><p>Portales informativos, libros digitales, membresías y suscripciones.</p></div>
+          <div class="proof reveal"><div class="num">03 · OPERACIÓN</div><h3>Ventas & reservaciones</h3><p>Autobuses, hotelería, reservas, e-commerce y sistemas con lógica propia.</p></div>
         </div>
       </div>
     </section>
 
     <section class="final">
       <div class="shell">
-        <div class="final-card">
+        <div class="final-card reveal">
           <div class="section-kicker">Tu turno</div>
           <h2 class="serif">Cuéntanos qué<br>quieres construir.</h2>
           <p>No necesitas saber exactamente qué paquete comprar. Dinos qué quieres lograr y empezamos desde ahí.</p>
           <div class="actions" style="justify-content:center">
-            <a class="btn primary" href="https://www.facebook.com/profile.php?id=61592431890783" target="_blank" rel="noopener">Visitar Moonia en Facebook →</a>
-            <button class="btn" id="shareBtn">Compartir Moonia por WhatsApp</button>
+            <a class="btn primary" id="mainWhatsApp" href="#" target="_blank" rel="noopener">Platicar con Moonia por WhatsApp →</a>
+            <a class="btn" href="https://www.facebook.com/profile.php?id=61592431890783" target="_blank" rel="noopener">Ver Facebook</a>
+            <button class="btn" id="shareBtn">Compartir Moonia</button>
           </div>
         </div>
       </div>

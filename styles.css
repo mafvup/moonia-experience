@@ -135,3 +135,100 @@
       .shell{padding:0 15px}.hero h1{font-size:55px}.services-grid{grid-template-columns:1fr}.service{min-height:130px}.mini-options{grid-template-columns:1fr 1fr}.actions .btn{width:100%;justify-content:center}.final-card{padding:38px 18px}
     }
 .brand-lockup{display:flex;align-items:center;gap:10px;min-width:0}.brand-lockup img{width:38px;height:32px;object-fit:contain}.brand-word{font-size:24px;letter-spacing:.08em;color:var(--cream);line-height:1}.brand-img{display:none}
+
+/* Moonia Experience 1.1 */
+.stars{
+  animation:starDrift 18s linear infinite alternate, twinkle 5.8s ease-in-out infinite;
+}
+.moon{
+  animation:moonFloat 8s ease-in-out infinite;
+}
+.orbit{
+  animation:orbitTurn 40s linear infinite;
+  transform-origin:center;
+}
+.hero-mark,.brand-lockup img{
+  animation:markGlow 4.8s ease-in-out infinite;
+}
+@keyframes starDrift{
+  from{background-position:11px 27px,43px 75px}
+  to{background-position:25px 10px,58px 91px}
+}
+@keyframes twinkle{50%{opacity:.62}}
+@keyframes moonFloat{50%{transform:translateY(9px);filter:drop-shadow(0 0 38px rgba(255,238,203,.3))}}
+@keyframes orbitTurn{to{transform:rotate(360deg)}}
+@keyframes markGlow{50%{filter:drop-shadow(0 0 16px rgba(229,187,123,.25))}}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+.result-intro{
+  font-size:13px;
+  letter-spacing:.02em;
+  color:#c7d1d7 !important;
+  margin-bottom:10px !important;
+}
+.result-note{
+  max-width:560px !important;
+  padding-top:14px;
+  margin-top:-4px !important;
+  border-top:1px solid rgba(229,187,123,.15);
+  font-size:12px !important;
+  color:#8499a6 !important;
+}
+#resultContact,#mainWhatsApp{position:relative;overflow:hidden}
+#resultContact:after,#mainWhatsApp:after,.btn.primary:after{
+  content:"";
+  position:absolute;
+  top:-60%;
+  left:-35%;
+  width:24%;
+  height:220%;
+  background:rgba(255,255,255,.28);
+  transform:rotate(18deg);
+  animation:ctaShine 5.2s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes ctaShine{
+  0%,68%{left:-35%;opacity:0}
+  73%{opacity:1}
+  88%{left:125%;opacity:0}
+  100%{left:125%;opacity:0}
+}
+
+@media(max-width:760px){
+  .nav-cta{
+    font-size:12.5px;
+    padding:10px 13px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .brand-word{font-size:22px}
+  .brand-lockup{gap:7px}
+  .brand-lockup img{width:34px;height:30px}
+  .hero{padding-top:36px}
+  .hero h1{font-size:58px;line-height:.9}
+  .hero h1 span{font-size:.6em;margin-top:11px}
+  .hero-lead{margin-top:24px;line-height:1.64}
+  .hero-card{border-radius:30px}
+  .hero-card .question{font-size:29px}
+  .quiz-wrap{border-radius:28px}
+}
+@media(max-width:430px){
+  .nav-inner{gap:8px}
+  .nav-cta{font-size:11.5px;padding:9px 10px}
+  .brand-word{font-size:20px}
+  .brand-lockup img{width:31px;height:28px}
+  .hero h1{font-size:51px}
+  .eyebrow{letter-spacing:.17em;font-size:11px}
+  .eyebrow:before,.eyebrow:after{width:30px}
+  .hero-lead{font-size:15.5px}
+  .result h3{font-size:36px}
+  .result-price{font-size:23px}
+  .result-actions .btn{width:100%;justify-content:center}
+  .price-row{align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.001ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important}
+  .reveal{opacity:1;transform:none}
+}

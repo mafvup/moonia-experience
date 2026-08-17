@@ -1,0 +1,17 @@
+MOONIA EXPERIENCE 1.1
+
+Sube/reemplaza estos 5 archivos en la raíz del repositorio:
+- index.html
+- styles.css
+- app.js
+- moonia-mark.svg
+- moonia-preview.png
+
+En GitHub:
+1. Repo moonia-experience > Add file > Upload files.
+2. Arrastra estos cinco archivos.
+3. Si pregunta por archivos existentes, confirma el reemplazo y haz Commit changes en main.
+4. GitHub Pages se actualizará automáticamente en unos minutos.
+
+URL:
+https://mafvup.github.io/moonia-experience/
