@@ -1,17 +1,1541 @@
-<section class="promo">
-  <img
-    src="assets/promo-actual.webp"
-    alt="Promoción actual Moonia Durango"
-  />
-</section>
-<picture>
-  <source
-    media="(max-width: 700px)"
-    srcset="assets/promo-mobile.webp"
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Moonia DGO. Contenido, diseño, copy y publicación para las redes sociales de tu negocio."
   >
 
-  <img
-    src="assets/promo-desktop.webp"
-    alt="Promoción actual Moonia Durango"
-  >
-</picture>
+  <title>Moonia DGO | Redes sociales para tu negocio</title>
+
+  <style>
+    :root {
+      --cream: #f1ece3;
+      --cream-dark: #e5ddd1;
+      --charcoal: #171717;
+      --charcoal-soft: #262626;
+      --gold: #a2835c;
+      --gold-light: #c1a783;
+      --white: #ffffff;
+      --line: rgba(23, 23, 23, 0.14);
+
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --radius-sm: 14px;
+
+      --shadow:
+        0 18px 50px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(162, 131, 92, 0.08),
+          transparent 30%
+        ),
+        var(--cream);
+
+      color: var(--charcoal);
+      font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    .header {
+      padding: 26px 0 18px;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: var(--cream);
+      top: 2px;
+      left: 10px;
+    }
+
+    .brand-name {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+    }
+
+    .brand-subtitle {
+      font-size: 9px;
+      letter-spacing: 0.24em;
+      color: #6b645d;
+      text-transform: uppercase;
+    }
+
+    .header-cta {
+      text-decoration: none;
+      border-bottom: 1px solid var(--charcoal);
+      font-size: 13px;
+      padding-bottom: 3px;
+    }
+
+    /* =========================
+       PROMO
+    ========================== */
+
+    .promo {
+      margin: 18px 0 72px;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      background: var(--cream-dark);
+    }
+
+    .promo picture,
+    .promo img {
+      width: 100%;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      padding: 30px 0 100px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 22px;
+    }
+
+    h1,
+    h2,
+    h3,
+    .price {
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+      font-weight: normal;
+    }
+
+    h1 {
+      font-size: clamp(52px, 7vw, 96px);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+      margin-bottom: 34px;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .hero-copy {
+      font-size: clamp(18px, 2vw, 22px);
+      max-width: 700px;
+      color: #4d4842;
+    }
+
+    .hero-side {
+      border-left: 1px solid var(--line);
+      padding-left: 34px;
+    }
+
+    .hero-side p {
+      font-size: 16px;
+      color: #5d5750;
+      margin-bottom: 26px;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      padding: 15px 24px;
+      border-radius: 999px;
+
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+
+      transition:
+        transform 0.25s ease,
+        opacity 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: var(--charcoal);
+      color: var(--white);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.35);
+      color: var(--white);
+    }
+
+    /* =========================
+       GENERIC SECTION
+    ========================== */
+
+    .section {
+      padding: 100px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 52px;
+    }
+
+    .section h2 {
+      font-size: clamp(38px, 5vw, 66px);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      margin-bottom: 20px;
+    }
+
+    .section-lead {
+      font-size: 18px;
+      color: #5b554e;
+      max-width: 700px;
+    }
+
+    /* =========================
+       HOW IT WORKS
+    ========================== */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .step {
+      min-height: 240px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.26);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,.5);
+    }
+
+    .step-number {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      color: var(--gold);
+    }
+
+    .step h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      color: #625c55;
+      font-size: 14px;
+    }
+
+    /* =========================
+       BENEFITS
+    ========================== */
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .benefit {
+      background: rgba(255,255,255,.34);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      border: 1px solid rgba(0,0,0,.07);
+    }
+
+    .benefit-title {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .benefit p {
+      color: #615b54;
+    }
+
+    /* =========================
+       PLANS
+    ========================== */
+
+    .plans-section {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 110px 0;
+    }
+
+    .plans-section .eyebrow {
+      color: var(--gold-light);
+    }
+
+    .plans-section .section-lead {
+      color: rgba(255,255,255,.68);
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 54px;
+    }
+
+    .plan {
+      position: relative;
+      padding: 34px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.035);
+
+      display: flex;
+      flex-direction: column;
+
+      min-height: 590px;
+    }
+
+    .plan-featured {
+      background: var(--cream);
+      color: var(--charcoal);
+      transform: translateY(-18px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+
+    .badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--gold);
+      color: var(--white);
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .plan-name {
+      font-family: Georgia, serif;
+      font-size: 33px;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font-size: 46px;
+      margin-bottom: 4px;
+    }
+
+    .price span {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      opacity: .6;
+    }
+
+    .plan-description {
+      margin: 18px 0 26px;
+      opacity: .7;
+      min-height: 50px;
+    }
+
+    .plan ul {
+      list-style: none;
+      margin-bottom: 32px;
+      flex-grow: 1;
+    }
+
+    .plan li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .plan-featured li {
+      border-bottom-color: rgba(0,0,0,.09);
+    }
+
+    .plan li::before {
+      content: "✓";
+      color: var(--gold-light);
+      margin-right: 9px;
+    }
+
+    .plan-featured li::before {
+      color: var(--gold);
+    }
+
+    .plan-featured .btn {
+      background: var(--charcoal);
+      color: var(--white);
+    }
+
+    .plans-note {
+      margin-top: 40px;
+      color: rgba(255,255,255,.52);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       PORTFOLIO PLACEHOLDER
+    ========================== */
+
+    .showcase {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .showcase-card {
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background:
+        linear-gradient(
+          140deg,
+          rgba(162,131,92,.25),
+          rgba(255,255,255,.2)
+        );
+      border: 1px solid var(--line);
+
+      display: flex;
+      align-items: flex-end;
+      padding: 28px;
+      position: relative;
+    }
+
+    .showcase-card::before {
+      content: "";
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      border: 1px solid rgba(162,131,92,.45);
+      top: 32px;
+      right: -50px;
+    }
+
+    .showcase-card p {
+      position: relative;
+      z-index: 2;
+      font-family: Georgia, serif;
+      font-size: 26px;
+      max-width: 240px;
+    }
+
+    /* =========================
+       FAQ
+    ========================== */
+
+    .faq {
+      max-width: 850px;
+    }
+
+    details {
+      border-bottom: 1px solid var(--line);
+      padding: 24px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-family: Georgia, serif;
+      font-size: 22px;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      float: right;
+      color: var(--gold);
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      padding-top: 16px;
+      color: #645d55;
+      max-width: 720px;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .final-cta {
+      margin: 80px 0;
+      padding: 70px;
+      background: var(--charcoal);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::after {
+      content: "";
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      border: 1px solid rgba(193,167,131,.22);
+      right: -110px;
+      top: -130px;
+    }
+
+    .final-cta h2 {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: .98;
+      margin-bottom: 28px;
+    }
+
+    .final-cta p {
+      position: relative;
+      z-index: 2;
+      color: rgba(255,255,255,.65);
+      max-width: 570px;
+      margin-bottom: 30px;
+    }
+
+    .final-cta .btn {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 42px 0 55px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      font-family: Georgia, serif;
+      font-size: 28px;
+    }
+
+    .footer-copy {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      color: #746d64;
+    }
+
+    /* =========================
+       ANIMATION
+    ========================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-side {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 30px;
+      }
+
+      .steps,
+      .plans {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .plan-featured {
+        transform: none;
+      }
+
+      .showcase {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .header {
+        padding-top: 18px;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .promo {
+        margin-bottom: 50px;
+        border-radius: 20px;
+      }
+
+      .hero {
+        padding-top: 10px;
+        padding-bottom: 70px;
+      }
+
+      h1 {
+        font-size: clamp(48px, 15vw, 72px);
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .steps,
+      .benefits,
+      .plans,
+      .showcase {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        min-height: 200px;
+      }
+
+      .plans-section {
+        padding: 80px 0;
+      }
+
+      .plan {
+        min-height: auto;
+      }
+
+      .final-cta {
+        padding: 44px 26px;
+        margin: 50px 0;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="header">
+    <div class="container header-inner">
+
+      <a href="#" class="brand">
+        <div class="brand-mark"></div>
+
+        <div>
+          <div class="brand-name">MOONIA</div>
+          <div class="brand-subtitle">Espacio Creativo</div>
+        </div>
+      </a>
+
+      <a href="#planes" class="header-cta">
+        Ver planes →
+      </a>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         BANNER PROMOCIONAL
+    ========================== -->
+
+    <section class="container">
+
+      <div class="promo">
+
+        <picture>
+
+          <source
+            media="(max-width: 700px)"
+            srcset="assets/promo-mobile.webp"
+          >
+
+          <img
+            src="assets/promo-desktop.webp"
+            alt="Promoción actual Moonia Durango"
+          >
+
+        </picture>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="container hero reveal">
+
+      <div>
+
+        <div class="eyebrow">
+          MOONIA DGO · PRESENCIA DIGITAL
+        </div>
+
+        <h1>
+          Tu negocio ya hace
+          <span class="gold">lo difícil.</span>
+        </h1>
+
+        <p class="hero-copy">
+          Nosotros hacemos que se vea.
+          Creamos contenido para que tu negocio mantenga
+          una presencia digital profesional sin que tengas
+          que preocuparte por diseñar, escribir o publicar.
+        </p>
+
+      </div>
+
+      <div class="hero-side">
+
+        <p>
+          Tú nos compartes tus productos, servicios,
+          fotografías y promociones.
+          Moonia transforma ese material en contenido
+          listo para tus redes.
+        </p>
+
+        <a
+          href="#planes"
+          class="btn btn-dark"
+        >
+          Conocer los planes →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CÓMO FUNCIONA
+    ========================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="eyebrow">
+            SIMPLE POR DISEÑO
+          </div>
+
+          <h2>
+            Tú tienes un negocio.<br>
+            <span class="gold">Nosotros hacemos el contenido.</span>
+          </h2>
+
+          <p class="section-lead">
+            Sin complicaciones, sin tener que aprender diseño
+            y sin preguntarte todos los días qué publicar.
+          </p>
+
+        </div>
+
+        <div class="steps">
+
+          <article class="step reveal">
+
+            <span class="step-number">01</span>
+
+            <div>
+              <h3>Compartes</h3>
+              <p>
+                Nos envías fotografías, promociones,
+                productos, servicios e información importante.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="step reveal">
+
+            <span class="step-number">02</span>
+
+            <div>
+              <h3>Creamos</h3>
+              <p>
+                Diseñamos tus publicaciones y redactamos
+                los textos siguiendo una línea visual consistente.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="step reveal">
+
+            <span class="step-number">03</span>
+
+            <div>
+              <h3>Apruebas</h3>
+              <p>
+                Recibes el contenido para revisarlo antes
+                de que cualquier publicación salga.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="step reveal">
+
+            <span class="step-number">04</span>
+
+            <div>
+              <h3>Publicamos</h3>
+              <p>
+                Programamos el contenido para mantener
+                tus redes activas durante todo el mes.
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUÉ RECIBES
+    ========================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="eyebrow">
+            TU PRESENCIA, RESUELTA
+          </div>
+
+          <h2>
+            Todo lo necesario para
+            <span class="gold">mantenerte presente.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="benefits">
+
+          <article class="benefit reveal">
+
+            <div class="benefit-title">
+              Diseño
+            </div>
+
+            <p>
+              Transformamos el material real de tu negocio
+              en piezas visuales cuidadas y consistentes.
+            </p>
+
+          </article>
+
+
+          <article class="benefit reveal">
+
+            <div class="benefit-title">
+              Copy
+            </div>
+
+            <p>
+              Creamos los textos, mensajes y llamados a la acción
+              para acompañar cada publicación.
+            </p>
+
+          </article>
+
+
+          <article class="benefit reveal">
+
+            <div class="benefit-title">
+              Planeación
+            </div>
+
+            <p>
+              Organizamos el contenido para que tus redes no dependan
+              de publicar algo de último minuto.
+            </p>
+
+          </article>
+
+
+          <article class="benefit reveal">
+
+            <div class="benefit-title">
+              Programación
+            </div>
+
+            <p>
+              Dejamos preparado el contenido para que tu presencia
+              digital continúe trabajando durante el mes.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PLANES
+    ========================== -->
+
+    <section
+      class="plans-section"
+      id="planes"
+    >
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="eyebrow">
+            PLANES MOONIA DGO
+          </div>
+
+          <h2>
+            Elige cuánto quieres
+            <span style="color: var(--gold-light);">
+              dejar resuelto.
+            </span>
+          </h2>
+
+          <p class="section-lead">
+            Diseñados para negocios que quieren mantenerse activos
+            en redes sin contratar una estrategia compleja.
+          </p>
+
+        </div>
+
+
+        <div class="plans">
+
+          <!-- ESENCIAL -->
+
+          <article class="plan reveal">
+
+            <div class="plan-name">
+              Esencial
+            </div>
+
+            <div class="price">
+              $2,000
+              <span>MXN / mes</span>
+            </div>
+
+            <p class="plan-description">
+              Para mantener tus redes activas con contenido profesional
+              sin complicarte.
+            </p>
+
+            <ul>
+              <li>8–10 contenidos mensuales</li>
+              <li>Facebook + Instagram</li>
+              <li>Diseño con material de tu negocio</li>
+              <li>Copy para cada publicación</li>
+              <li>Programación de contenido</li>
+              <li>1 ronda de cambios</li>
+            </ul>
+
+            <a
+              href="#"
+              class="btn btn-outline plan-whatsapp"
+              data-plan="Esencial de $2,000 MXN"
+              target="_blank"
+            >
+              Me interesa →
+            </a>
+
+          </article>
+
+
+          <!-- ESENCIAL PLUS -->
+
+          <article class="plan plan-featured reveal">
+
+            <div class="badge">
+              Más elegido
+            </div>
+
+            <div class="plan-name">
+              Esencial+
+            </div>
+
+            <div class="price">
+              $2,500
+              <span>MXN / mes</span>
+            </div>
+
+            <p class="plan-description">
+              Más contenido y una planeación mensual más completa
+              para marcas con mayor actividad.
+            </p>
+
+            <ul>
+              <li>12–15 contenidos mensuales</li>
+              <li>Facebook + Instagram</li>
+              <li>Diseño con material de tu negocio</li>
+              <li>Copy para cada publicación</li>
+              <li>Programación de contenido</li>
+              <li>Calendario mensual</li>
+              <li>Revisión básica de resultados</li>
+              <li>1 ronda de cambios</li>
+            </ul>
+
+            <a
+              href="#"
+              class="btn plan-whatsapp"
+              data-plan="Esencial+ de $2,500 MXN"
+              target="_blank"
+            >
+              Quiero este plan →
+            </a>
+
+          </article>
+
+
+          <!-- PRESENCIA PRO -->
+
+          <article class="plan reveal">
+
+            <div class="plan-name">
+              Presencia Pro
+            </div>
+
+            <div class="price">
+              $3,000
+              <span>MXN / mes</span>
+            </div>
+
+            <p class="plan-description">
+              Mayor presencia, flexibilidad y prioridad para negocios
+              con contenido constante.
+            </p>
+
+            <ul>
+              <li>15 contenidos mensuales</li>
+              <li>2 historias adicionales</li>
+              <li>Facebook + Instagram</li>
+              <li>Diseño + copy</li>
+              <li>Programación de contenido</li>
+              <li>Calendario mensual</li>
+              <li>Revisión básica de resultados</li>
+              <li>2 rondas de cambios</li>
+              <li>Prioridad de ajustes</li>
+            </ul>
+
+            <a
+              href="#"
+              class="btn btn-outline plan-whatsapp"
+              data-plan="Presencia Pro de $3,000 MXN"
+              target="_blank"
+            >
+              Quiero Presencia Pro →
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <p class="plans-note">
+          Los planes no incluyen inversión publicitaria, gestión de mensajes,
+          fotografía profesional, community management ni producción audiovisual.
+          Estos servicios pueden cotizarse por separado.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EJEMPLOS
+    ========================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="eyebrow">
+            MOONIA EN ACCIÓN
+          </div>
+
+          <h2>
+            No tienes que
+            <span class="gold">imaginarlo.</span>
+          </h2>
+
+          <p class="section-lead">
+            Próximamente colocaremos aquí ejemplos reales de cómo
+            transformamos fotografías y material cotidiano
+            en contenido para nuestros clientes.
+          </p>
+
+        </div>
+
+
+        <div class="showcase">
+
+          <article class="showcase-card reveal">
+            <p>
+              Tu producto.<br>
+              Mejor presentado.
+            </p>
+          </article>
+
+          <article class="showcase-card reveal">
+            <p>
+              Tu servicio.<br>
+              Mejor comunicado.
+            </p>
+          </article>
+
+          <article class="showcase-card reveal">
+            <p>
+              Tu negocio.<br>
+              Más presente.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="eyebrow">
+            PREGUNTAS FRECUENTES
+          </div>
+
+          <h2>
+            Antes de
+            <span class="gold">empezar.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="faq reveal">
+
+          <details>
+
+            <summary>
+              ¿Yo tengo que tomar las fotografías?
+            </summary>
+
+            <p>
+              Puedes enviarnos fotografías de tus productos, servicios,
+              instalaciones o negocio. Moonia utiliza ese material
+              para crear los contenidos del plan contratado.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              ¿Incluye publicidad pagada?
+            </summary>
+
+            <p>
+              No. Estos planes están enfocados en creación,
+              diseño y programación de contenido orgánico.
+              Las campañas publicitarias pueden cotizarse por separado.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              ¿Responden los mensajes de mis clientes?
+            </summary>
+
+            <p>
+              No dentro de estos paquetes.
+              La gestión de comunidad y atención de mensajes
+              se maneja como un servicio adicional.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              ¿Puedo pedir cambios?
+            </summary>
+
+            <p>
+              Sí. Cada paquete incluye las rondas de cambios indicadas
+              antes de programar el contenido.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              ¿Tengo que contratar por todo el año?
+            </summary>
+
+            <p>
+              No. Los planes se manejan de forma mensual,
+              salvo promociones especiales o acuerdos específicos.
+            </p>
+
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <section class="container">
+
+      <div class="final-cta reveal">
+
+        <div class="eyebrow">
+          MOONIA DGO
+        </div>
+
+        <h2>
+          Deja de preocuparte por
+          <span style="color: var(--gold-light);">
+            qué publicar.
+          </span>
+        </h2>
+
+        <p>
+          Cuéntanos sobre tu negocio y te ayudamos a elegir
+          la opción que tenga sentido para ti.
+        </p>
+
+        <a
+          href="#"
+          class="btn btn-gold general-whatsapp"
+          target="_blank"
+        >
+          Hablemos de tu negocio →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+
+        <div class="footer-brand">
+          MOONIA
+        </div>
+
+        <div class="footer-copy">
+          Espacio Creativo · Durango
+        </div>
+
+      </div>
+
+
+      <div class="footer-copy">
+        Creatividad que conecta.<br>
+        Tecnología que transforma.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /*
+      =======================================
+      CAMBIA SOLO ESTE NÚMERO
+      =======================================
+
+      México:
+      52 + número a 10 dígitos
+
+      Ejemplo ficticio:
+      526181234567
+
+      NO uses:
+      +
+      espacios
+      guiones
+    */
+
+    const MOONIA_WHATSAPP = "52XXXXXXXXXX";
+
+
+    /*
+      WHATSAPP GENERAL
+    */
+
+    const generalMessage =
+      encodeURIComponent(
+        "Hola 👋 Vi la promoción de Moonia DGO y me gustaría recibir información sobre los planes de redes sociales."
+      );
+
+    document
+      .querySelectorAll(".general-whatsapp")
+      .forEach(link => {
+
+        link.href =
+          `https://wa.me/${MOONIA_WHATSAPP}?text=${generalMessage}`;
+
+      });
+
+
+    /*
+      WHATSAPP POR PLAN
+    */
+
+    document
+      .querySelectorAll(".plan-whatsapp")
+      .forEach(link => {
+
+        const plan = link.dataset.plan;
+
+        const message =
+          encodeURIComponent(
+            `Hola 👋 Vi Moonia DGO y me interesa el plan ${plan}. Me gustaría recibir más información.`
+          );
+
+        link.href =
+          `https://wa.me/${MOONIA_WHATSAPP}?text=${message}`;
+
+      });
+
+
+    /*
+      ANIMACIONES AL HACER SCROLL
+    */
+
+    const observer =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(element => {
+        observer.observe(element);
+      });
+
+  </script>
+
+</body>
+</html>
