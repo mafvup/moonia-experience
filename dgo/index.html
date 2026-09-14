@@ -484,52 +484,88 @@
     }
 
     /* =========================
-       PORTFOLIO PLACEHOLDER
+       MOONIA EN ACCIÓN
     ========================== */
 
-    .showcase {
+    .moon-action .section-header {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .moon-action .section-lead {
+      margin: 0 auto;
+    }
+
+    .work-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
     }
 
-    .showcase-card {
-      aspect-ratio: 4 / 5;
-      border-radius: var(--radius-md);
+    .work-card {
+      min-width: 0;
       overflow: hidden;
-      background:
-        linear-gradient(
-          140deg,
-          rgba(162,131,92,.25),
-          rgba(255,255,255,.2)
-        );
+      background: rgba(255,255,255,.5);
       border: 1px solid var(--line);
-
-      display: flex;
-      align-items: flex-end;
-      padding: 28px;
-      position: relative;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+      transition: transform .35s ease, box-shadow .35s ease;
     }
 
-    .showcase-card::before {
-      content: "";
-      position: absolute;
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      border: 1px solid rgba(162,131,92,.45);
-      top: 32px;
-      right: -50px;
+    .work-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,.10);
     }
 
-    .showcase-card p {
-      position: relative;
-      z-index: 2;
-      font-family: Georgia, serif;
-      font-size: 26px;
-      max-width: 240px;
+    .work-card img {
+      width: 100%;
+      height: auto;
     }
 
+    .work-meta {
+      padding: 22px 24px 24px;
+    }
+
+    .work-meta h3 {
+      margin-bottom: 8px;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .14em;
+    }
+
+    .work-meta p {
+      font-size: 14px;
+      color: #625c55;
+    }
+
+    .more-work {
+      max-width: 900px;
+      margin: 55px auto 0;
+      padding: 28px 20px;
+      text-align: center;
+      border-top: 1px solid var(--gold-light);
+      border-bottom: 1px solid var(--gold-light);
+      color: #5b554e;
+    }
+
+    .more-work strong {
+      display: block;
+      margin-bottom: 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      font-weight: normal;
+      color: var(--charcoal);
+    }
+
+    @media (max-width: 900px) {
+      .work-grid {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        margin: 0 auto;
+      }
+    }
     /* =========================
        FAQ
     ========================== */
@@ -688,10 +724,6 @@
       .plan-featured {
         transform: none;
       }
-
-      .showcase {
-        grid-template-columns: 1fr 1fr;
-      }
     }
 
     @media (max-width: 650px) {
@@ -736,8 +768,7 @@
 
       .steps,
       .benefits,
-      .plans,
-      .showcase {
+      .plans {
         grid-template-columns: 1fr;
       }
 
@@ -1221,62 +1252,68 @@
 
 
     <!-- =========================
-         EJEMPLOS
+         MOONIA EN ACCIÓN
     ========================== -->
 
-    <section class="section">
-
+    <section class="section moon-action" id="trabajos" aria-labelledby="trabajos-title">
       <div class="container">
-
         <div class="section-header reveal">
+          <div class="eyebrow">MOONIA EN ACCIÓN</div>
+          <h2 id="trabajos-title">
+            Diferentes negocios. Una misma idea:
+            <span class="gold">hacerlos brillar.</span>
+          </h2>
+          <p class="section-lead">
+            Estrategia, diseño y contenido adaptado a cada marca.
+          </p>
+        </div>
 
-          <div class="eyebrow">
-            MOONIA EN ACCIÓN
+        <div class="work-grid">
+          <div class="reveal">
+            <article class="work-card">
+              <img src="assets/work-boxfit.webp"
+                   alt="Caso BoxFit trabajado por Moonia"
+                   loading="lazy" decoding="async">
+              <div class="work-meta">
+                <h3>BOXFIT</h3>
+                <p>Social Media · Estrategia Digital</p>
+              </div>
+            </article>
           </div>
 
-          <h2>
-            No tienes que
-            <span class="gold">imaginarlo.</span>
-          </h2>
+          <div class="reveal">
+            <article class="work-card">
+              <img src="assets/work-norma.webp"
+                   alt="Caso Norma / Terramar trabajado por Moonia"
+                   loading="lazy" decoding="async">
+              <div class="work-meta">
+                <h3>NORMA / TERRAMAR</h3>
+                <p>Marca Personal · Social Media</p>
+              </div>
+            </article>
+          </div>
 
-          <p class="section-lead">
-            Próximamente colocaremos aquí ejemplos reales de cómo
-            transformamos fotografías y material cotidiano
-            en contenido para nuestros clientes.
+          <div class="reveal">
+            <article class="work-card">
+              <img src="assets/work-local.webp"
+                   alt="Concepto de contenido para una cafetería creado por Moonia"
+                   loading="lazy" decoding="async">
+              <div class="work-meta">
+                <h3>TU NEGOCIO AQUÍ</h3>
+                <p>Concepto Moonia · Social Media</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="more-work reveal">
+          <p>
+            <strong>Hay mucho más detrás de Moonia.</strong>
+            Branding · Desarrollo Web · SEO · Social Media · Sistemas · Consultoría
           </p>
-
         </div>
-
-
-        <div class="showcase">
-
-          <article class="showcase-card reveal">
-            <p>
-              Tu producto.<br>
-              Mejor presentado.
-            </p>
-          </article>
-
-          <article class="showcase-card reveal">
-            <p>
-              Tu servicio.<br>
-              Mejor comunicado.
-            </p>
-          </article>
-
-          <article class="showcase-card reveal">
-            <p>
-              Tu negocio.<br>
-              Más presente.
-            </p>
-          </article>
-
-        </div>
-
       </div>
-
     </section>
-
 
     <!-- =========================
          FAQ
